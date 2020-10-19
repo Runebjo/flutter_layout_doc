@@ -24,16 +24,15 @@ class MyApp extends StatelessWidget {
 class Images extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-      ),
+    return Center(
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset('images/pic1.jpg'),
-          Image.asset('images/pic2.jpg'),
-          Image.asset('images/pic3.jpg'),
+          Icon(Icons.star, color: Colors.green[500]),
+          Icon(Icons.star, color: Colors.green[500]),
+          Icon(Icons.star, color: Colors.green[500]),
+          Icon(Icons.star, color: Colors.white),
+          Icon(Icons.star, color: Colors.white),
         ],
       ),
     );
