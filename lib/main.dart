@@ -24,15 +24,18 @@ class MyApp extends StatelessWidget {
 class Images extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
+    return Container(
+      margin: EdgeInsets.all(30),
+      padding: EdgeInsets.all(15),
+      decoration: BoxDecoration(
+        border: Border.all(width: 10, color: Colors.red),
+        borderRadius: BorderRadius.all(Radius.circular(8)),
+        color: Colors.black26,
+      ),
+      child: Column(
         children: [
-          Icon(Icons.star, color: Colors.green[500]),
-          Icon(Icons.star, color: Colors.green[500]),
-          Icon(Icons.star, color: Colors.green[500]),
-          Icon(Icons.star, color: Colors.white),
-          Icon(Icons.star, color: Colors.white),
+          Text('Hello'),
+          Text('World'),
         ],
       ),
     );
