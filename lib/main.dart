@@ -24,20 +24,26 @@ class MyApp extends StatelessWidget {
 class Images extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(30),
-      padding: EdgeInsets.all(15),
-      decoration: BoxDecoration(
-        border: Border.all(width: 10, color: Colors.red),
-        borderRadius: BorderRadius.all(Radius.circular(8)),
-        color: Colors.black26,
-      ),
-      child: Column(
-        children: [
-          Text('Hello'),
-          Text('World'),
-        ],
-      ),
+    return Center(
+      child: _buildGrid(),
     );
   }
 }
+
+Widget _buildGrid() => GridView.extent(
+      maxCrossAxisExtent: 100,
+      padding: EdgeInsets.all(4),
+      mainAxisSpacing: 4,
+      crossAxisSpacing: 4,
+      children: _buildGridTileList(30),
+    );
+
+List<Container> _buildGridTileList(int count) => List.generate(
+      count,
+      (i) => Container(
+        child: Text(
+          'hello$i',
+          style: TextStyle(color: Colors.white, fontSize: 12),
+        ),
+      ),
+    );
